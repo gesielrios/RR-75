@@ -1,5 +1,7 @@
 Lojadecarros::Application.routes.draw do
 
+  resources :carros
+
   root :to => "carros#index"
   resources "carros"
 

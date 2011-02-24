@@ -1,0 +1,3 @@
+class Moto
+end
+

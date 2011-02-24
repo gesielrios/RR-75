@@ -8,18 +8,21 @@ gem 'rails', '3.0.4'
 gem 'pg'
 gem 'nifty-generators'
 
-group :development, :test do
+group :development do
   gem "rspec", "2.5.0"
   gem "rspec-rails", "2.5.0"
   gem "ruby-debug"
   gem "rcov"
+end
 
+group :test do
   gem "capybara"
   gem "database_cleaner"
   gem "cucumber-rails"
   gem "cucumber"
   gem "spork"
   gem "launchy"
+  gem 'factory_girl_rails'
 end
 
 # Use unicorn as the web server
