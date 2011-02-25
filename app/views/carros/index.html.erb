@@ -32,8 +32,20 @@
       R$ <%= carro.preco%>
       <br/>
     <% end %>
+    <%= will_paginate @carros %>
   <% else %>
       <p>nenhum carro cadastrado.</p>
   <% end %>
 </div>
+
+<strong>Carros a venda</strong>
+
+<br/><br/>
+
+<%= form_tag :controller => 'carros', :action => 'busca' do %>
+
+  <%= text_field_tag 'query', nil, :class => 'button-search' %>
+  <%= submit_tag "Buscar", :disable_with => '...', :class => 'buscar'%>
+
+<% end %>
 

@@ -1,12 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 gem 'nifty-generators'
+gem 'thinking-sphinx', :require => 'thinking_sphinx'
+gem 'will_paginate', '2.3.15'
 
 group :development do
   gem "rspec", "2.5.0"

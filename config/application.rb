@@ -21,6 +21,7 @@ module Lojadecarros
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
+    config.active_record.observers = :carro_observer
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
@@ -42,6 +43,7 @@ module Lojadecarros
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
   end
 end
 

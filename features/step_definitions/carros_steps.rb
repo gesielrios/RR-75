@@ -14,3 +14,10 @@ Entao /^eu deveria ver "([^"]*)"$/ do |texto|
   page.should have_content(texto)
 end
 
+Dado /^que os seguintes carros existem:$/ do |tabela|
+  tabela.hashes.each do |hash|
+    carro = Carro.new(hash)
+    carro.save
+  end
+end
+
