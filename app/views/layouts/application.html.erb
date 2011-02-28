@@ -13,7 +13,16 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= link_to 'RSS', feed_path('rss') %>
+
       <%= yield %>
+
+      <div id="footer" class="blue-style">
+        <p>Loja de carros | Caelum | Ruby on Rails | RR - 75 | 2011 </p>
+        <p><%= hora_agora %></p>
+        <p><%= Info.texto %></p>
+      </div>
     </div>
   </body>
 </html>
+

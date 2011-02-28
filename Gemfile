@@ -5,6 +5,7 @@ gem 'pg'
 gem 'nifty-generators'
 gem 'thinking-sphinx', :require => 'thinking_sphinx'
 gem 'will_paginate', '2.3.15'
+gem 'restfulie'
 
 group :development do
   gem "rspec", "2.5.0"

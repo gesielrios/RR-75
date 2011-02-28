@@ -1,5 +1,7 @@
 class CarrosController < ApplicationController
 
+  respond_to :rss, :only => :feed
+
   def index
     @carro = Carro.new
     @carros = Carro.order('created_at DESC').paginate :page => params[:page], :per_page => 3
@@ -18,6 +20,12 @@ class CarrosController < ApplicationController
                 :order => :created_at, :sort_mode => :desc
 
     render :action => 'index'
+  end
+
+  def feed
+    @carros = Carro.all
+
+    respond_with @carros
   end
 
 end

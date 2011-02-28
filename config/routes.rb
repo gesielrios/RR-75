@@ -1,5 +1,7 @@
 Lojadecarros::Application.routes.draw do
 
+  match 'carros/feed(.:format)' => 'carros#feed', :as => 'feed'
+
   resources :carros
 
   root :to => "carros#index"

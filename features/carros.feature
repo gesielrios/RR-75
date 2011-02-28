@@ -23,3 +23,24 @@ Funcionalidade: Carros
     E aperto o botao "Buscar"
     Entao eu deveria ver "vectra"
 
+  Cenario: Feeds
+    Dado que os seguintes carros existem:
+      |   nome  |     descricao    | preco |
+      | vectra  | vendo meu vectra | 32000 |
+      E cliclo no link "RSS"
+      Entao o rss deve ser:
+      """
+      <rss version="2.0">
+        <channel>
+          <title>Loja de carros</title>
+          <link>http://localhost:3000/</link>
+          <description>RSS da loja de carros</description>
+          <language>pt-br</language>
+          <item>
+            <title>vectra</title>
+            <description>vendo meu vectra</description>
+          </item>
+        </channel>
+      </rss>
+      """
+
